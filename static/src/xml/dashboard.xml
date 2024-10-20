@@ -1,0 +1,53 @@
+<template>
+    <t t-name="ProjectDashBoardMain">
+        <div class="o_control_panel">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div id="total_projects_main" class="col-md-12 mt-4" t-on-click="">
+                                <div class="project_box" style="height: 180px">
+                                    <div class="row">
+                                        <div class="col-md-12 mt-5 text-center">
+                                            <img src="project_management/static/src/images/folder_image.png"
+                                                 style="width: 50px; height: 50px" alt="search"
+                                            />
+                                        </div>
+                                        <div class="col-md-12 mt-3 text-center">
+                                            <span class="project_count"
+                                                  id="total_projects">
+                                                <t t-esc="this.project_state.projects_count"/>
+                                            </span>
+                                            <br/>
+                                            <span class="project_box_title">Projects</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 mt-3">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Project Name</th>
+                                                <th>Progress</th>
+                                                <th>Deadline</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr t-foreach="this.project_state.projects" t-as="project" t-key="project.name">
+                                                <td><t t-esc="project.name"/></td>
+                                                <td><t t-esc="project.progress"/>%</td>
+                                                <td><t t-esc="project.end_date"/></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</template>

@@ -1,0 +1,99 @@
+<odoo>
+    <data>
+        <record id="project_management_view_tree" model="ir.ui.view">
+            <field name="name">project management tree view</field>
+            <field name="model">project.management</field>
+            <field name="arch" type="xml">
+                <tree multi_edit="1" >
+                    <header>
+                        <button name="project_excel_report" type="object" string="Print Excel Report" class="btn-secondary" icon="fa-file-excel-o"/>
+                    </header>
+                    <field name="name"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="status"/>
+                    <field name="progress"/>
+                    <field name="assigned_team"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="project_management_view_form" model="ir.ui.view">
+            <field name="name">project management view form</field>
+            <field name="model">project.management</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <header>
+                            <field name="status" widget="statusbar" options="{'clickable':1}"/>
+                        </header>
+                        <group string="Project info">
+                                <field name="name"/>
+                                <field name="description"/>
+                                <field name="start_date"/>
+                                <field name="end_date"/>
+                                <field name="progress"/>
+                                <field name="assigned_team"/>
+                        </group>
+
+                        <notebook>
+                            <page string="Comments">
+                                <field name="project_comments" editable="bottom">
+                                    <tree string="Project Comments">
+                                        <field name="comment"/>
+                                        <field name="user_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="project_management_view_search" model="ir.ui.view">
+            <field name="name">project management search</field>
+            <field name="model">project.management</field>
+            <field name="arch" type="xml">
+                <search>
+                    <filter string="Planning" name="status_planning" domain="[('status', '=', 'planning')]"/>
+                    <filter string="In Progress" name="status_in_progress" domain="[('status', '=', 'in_progress')]"/>
+                    <filter string="Completed" name="status_completed" domain="[('status', '=', 'completed')]"/>
+                    <filter string="On Hold" name="status_on_hold" domain="[('status', '=', 'on_hold')]"/>
+
+                    <filter string="Assigned Team" name="assigned_team_filter" domain="[('assigned_team', '!=', False)]"/>
+
+                    <field name="name" string="Project Name"/>
+
+                    <group expand="0" string="Group By">
+                        <filter string="Status" name="group_by_status" context="{'group_by':'status'}"/>
+                        <filter string="Assigned Team" name="group_by_assigned_team" context="{'group_by':'assigned_team'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="check_progress_cron" model="ir.cron">
+            <field name="name">check progress</field>
+            <field name="model_id" ref="model_project_management"/>
+            <field name="state">code</field>
+            <field name="code">model.check_progress()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="project_management_action" model="ir.actions.act_window">
+            <field name="name">Projects Management Action</field>
+            <field name="res_model">project.management</field>
+        </record>
+
+        <menuitem
+            id="projects_menu_item"
+            name="Projects Management"
+            parent="project_management_menu"
+            action="project_management_action"
+        />
+    </data>
+</odoo>

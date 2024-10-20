@@ -1,0 +1,24 @@
+<odoo>
+    <menuitem
+        id="project_management_root_menu"
+        name="Project Management"
+    />
+
+    <menuitem
+        id="tasks_menu"
+        name="Tasks"
+        parent="project_management_root_menu"
+    />
+
+    <menuitem
+        id="project_management_menu"
+        name="Projects"
+        parent="project_management_root_menu"
+    />
+
+    <menuitem
+        id="project_dashboard_menu"
+        name="Dashboard"
+        parent="project_management_root_menu"
+    />
+</odoo>

@@ -1,0 +1,67 @@
+<odoo>
+    <record id="project_performance_report" model="ir.actions.report">
+        <field name="name">Project Performance Report</field>
+        <field name="model">project.management</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="binding_model_id" ref="model_project_management"/>
+        <field name="binding_type">report</field>
+        <field name="report_name">project_management.project_performance_report_template</field>
+    </record>
+
+    <template id="project_performance_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="project">
+                <h1 style="color:blue;">Project Report</h1>
+                <h2>Project Name: <t t-esc="project.name"/></h2>
+                <h2>Start Date: <t t-esc="project.start_date"/></h2>
+                <h2>Deadline: <t t-esc="project.end_date"/></h2>
+                <h2>Status: <t t-esc="project.status"/></h2>
+                <style>
+                    table {
+                        width: 100%;
+                        border: 1px solid #b3adad;
+                        border-collapse: collapse;
+                        padding: 5px;
+                    }
+                    table th {
+                        border: 1px solid #b3adad;
+                        padding: 5px;
+                        background: #f0f0f0;
+                        color: #313030;
+                    }
+                    table td {
+                        border: 1px solid #b3adad;
+                        text-align: center;
+                        padding: 5px;
+                        background: #ffffff;
+                        color: #313030;
+                    }
+                </style>
+                <table>
+                    <thead>
+                        <tr>
+                            <td colspan="2"  style="background-color: blue; color: white;">Tasks</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>All Tasks</td>
+                            <td>Is Completed</td>
+                        </tr>
+                        <tr>
+                            <t t-foreach="project.tasks_ids" t-as="task">
+                                <tr>
+                                    <td><t t-esc="task.name"/></td>
+                                    <td>
+                                        <t t-if="task.status == 'done'">Yes</t>
+                                        <t t-else="">No</t>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tr>
+                    </tbody>
+                </table>
+            </t>
+        </t>
+    </template>
+</odoo>
