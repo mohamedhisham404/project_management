@@ -21,8 +21,8 @@
                             <page string="Comments">
                                 <field name="task_comments" editable="bottom">
                                     <tree string="Task Comments">
-                                        <field name="comment"/>
                                         <field name="user_id"/>
+                                        <field name="comment"/>
                                     </tree>
                                 </field>
                             </page>

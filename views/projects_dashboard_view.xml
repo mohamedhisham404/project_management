@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <odoo>
-
-    <!--Action Client-->
     <record id="project_dashboard_action_client" model="ir.actions.client">
         <field name="name">Project Dashbaord</field>
         <field name="tag">project_dashboard_main</field>
     </record>
 
-
-    <!-- Menu     -->
     <menuitem
             id="project_menu_open_dashboard"
             name="Project Dashboard"
@@ -17,5 +12,4 @@
             parent="project_dashboard_menu"
             sequence="1"
     />
-
 </odoo>

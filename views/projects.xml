@@ -40,8 +40,8 @@
                             <page string="Comments">
                                 <field name="project_comments" editable="bottom">
                                     <tree string="Project Comments">
-                                        <field name="comment"/>
                                         <field name="user_id"/>
+                                        <field name="comment"/>
                                     </tree>
                                 </field>
                             </page>
@@ -87,6 +87,7 @@
         <record id="project_management_action" model="ir.actions.act_window">
             <field name="name">Projects Management Action</field>
             <field name="res_model">project.management</field>
+            <field name="view_mode">tree,form</field>
         </record>
 
         <menuitem
