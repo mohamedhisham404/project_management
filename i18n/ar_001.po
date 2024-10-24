@@ -18,62 +18,62 @@ msgstr ""
 #. module: project_management
 #: model:res.groups,name:project_management.admins_group
 msgid "Admin"
-msgstr ""
+msgstr "مسؤول"
 
 #. module: project_management
 #: model_terms:ir.ui.view,arch_db:project_management.project_performance_report_template
 msgid "All Tasks"
-msgstr ""
+msgstr "كل المهام"
 
 #. module: project_management
 #: model:ir.model.fields,field_description:project_management.field_project_management__assigned_team
 #: model_terms:ir.ui.view,arch_db:project_management.project_management_view_search
 msgid "Assigned Team"
-msgstr ""
+msgstr "الفريق المخصص"
 
 #. module: project_management
 #: model:ir.model.fields,field_description:project_management.field_project_task__assigned_to
 msgid "Assigned To"
-msgstr ""
+msgstr "مخصص الى"
 
 #. module: project_management
 #: model:ir.model.fields.selection,name:project_management.selection__project_management__status__completed
 #: model_terms:ir.ui.view,arch_db:project_management.project_management_view_search
 msgid "Completed"
-msgstr ""
+msgstr "مكتمل"
 
 #. module: project_management
 #: model:ir.model.fields,field_description:project_management.field_project_management__create_uid
 #: model:ir.model.fields,field_description:project_management.field_project_task__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "تم إنشاؤه بواسطة"
 
 #. module: project_management
 #: model:ir.model.fields,field_description:project_management.field_project_management__create_date
 #: model:ir.model.fields,field_description:project_management.field_project_task__create_date
 msgid "Created on"
-msgstr ""
+msgstr "تم انشاءه في"
 
 #. module: project_management
 #: model:ir.model.fields,field_description:project_management.field_project_management__end_date
 msgid "Deadline"
-msgstr ""
+msgstr "موعد التسليم"
 
 #. module: project_management
 #: model_terms:ir.ui.view,arch_db:project_management.project_performance_report_template
 msgid "Deadline:"
-msgstr ""
+msgstr "موعد التسليم"
 
 #. module: project_management
 #: model:ir.model.fields,field_description:project_management.field_project_management__display_name
 #: model:ir.model.fields,field_description:project_management.field_project_task__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "اسم العرض"
 
 #. module: project_management
 #: model:ir.model.fields.selection,name:project_management.selection__project_task__status__done
 msgid "Done"
-msgstr ""
+msgstr "منتهي"
 
 #. module: project_management
 #: model_terms:ir.ui.view,arch_db:project_management.project_management_view_search
@@ -83,7 +83,7 @@ msgstr ""
 #. module: project_management
 #: model:ir.model.fields.selection,name:project_management.selection__project_task__priority__high
 msgid "High"
-msgstr ""
+msgstr "عالي"
 
 #. module: project_management
 #: model:ir.model.fields,field_description:project_management.field_project_management__id
@@ -96,93 +96,93 @@ msgstr ""
 #: model:ir.model.fields.selection,name:project_management.selection__project_task__status__in_progress
 #: model_terms:ir.ui.view,arch_db:project_management.project_management_view_search
 msgid "In Progress"
-msgstr ""
+msgstr "في تَقَدم"
 
 #. module: project_management
 #: model_terms:ir.ui.view,arch_db:project_management.project_performance_report_template
 msgid "Is Completed"
-msgstr ""
+msgstr "مكتمل"
 
 #. module: project_management
 #: model:ir.model.fields,field_description:project_management.field_project_management__write_uid
 #: model:ir.model.fields,field_description:project_management.field_project_task__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "اخر تحديث تم بواسطة"
 
 #. module: project_management
 #: model:ir.model.fields,field_description:project_management.field_project_management__write_date
 #: model:ir.model.fields,field_description:project_management.field_project_task__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "اخر تحديث تم في"
 
 #. module: project_management
 #: model:ir.model.fields.selection,name:project_management.selection__project_task__priority__low
 msgid "Low"
-msgstr ""
+msgstr "منخفض"
 
 #. module: project_management
 #: model:ir.model.fields.selection,name:project_management.selection__project_task__priority__medium
 msgid "Medium"
-msgstr ""
+msgstr "متوسط"
 
 #. module: project_management
 #: model_terms:ir.ui.view,arch_db:project_management.project_performance_report_template
 msgid "No"
-msgstr ""
+msgstr "لا"
 
 #. module: project_management
 #: model:ir.model.fields.selection,name:project_management.selection__project_management__status__on_hold
 #: model_terms:ir.ui.view,arch_db:project_management.project_management_view_search
 msgid "On Hold"
-msgstr ""
+msgstr "في الانتظار"
 
 #. module: project_management
 #: model:ir.model.fields.selection,name:project_management.selection__project_management__status__planning
 #: model_terms:ir.ui.view,arch_db:project_management.project_management_view_search
 msgid "Planning"
-msgstr ""
+msgstr "تخطيط"
 
 #. module: project_management
 #: model_terms:ir.ui.view,arch_db:project_management.project_management_view_tree
 msgid "Print Excel Report"
-msgstr ""
+msgstr "اطبع تقرير اكسيل"
 
 #. module: project_management
 #: model:ir.model.fields,field_description:project_management.field_project_task__priority
 msgid "Priority"
-msgstr ""
+msgstr "الاولويه"
 
 #. module: project_management
 #: model:ir.model.fields,field_description:project_management.field_project_task__progress
 msgid "Progress"
-msgstr ""
+msgstr "تقدم"
 
 #. module: project_management
 #: model:ir.model.fields,field_description:project_management.field_project_task__project_id
 msgid "Project"
-msgstr ""
+msgstr "مشروع"
 
 #. module: project_management
 #: model:ir.model.fields,field_description:project_management.field_project_management__description
 msgid "Project Details"
-msgstr ""
+msgstr "تفاصيل المشروع"
 
 #. module: project_management
 #: model:ir.model,name:project_management.model_project_management
 #: model:ir.ui.menu,name:project_management.project_management_root_menu
 msgid "Project Management"
-msgstr ""
+msgstr "إدارة المشاريع"
 
 #. module: project_management
 #: model:res.groups,name:project_management.project_managers_group
 msgid "Project Manager"
-msgstr ""
+msgstr "مدير المشروع"
 
 #. module: project_management
 #: model:ir.model.fields,field_description:project_management.field_project_management__name
 #: model_terms:ir.ui.view,arch_db:project_management.project_management_view_search
 msgid "Project Name"
-msgstr ""
+msgstr "اسم المشروع"
 
 #. module: project_management
 #: model_terms:ir.ui.view,arch_db:project_management.project_performance_report_template
